@@ -24,9 +24,16 @@ This schedule will be used to keep track of your progress throughout the week an
 | Homepage | H | 2hr | tbd |
 | Footer | H | 1hr | tbd |
 
+App summary
 
-# User’s will be able to create an account and open ‘packs’ that will give them random players from a league they chosen (BPL. La Liga, Series A, etc.)
-# They will then have the ability to edit the player’s stats. I was kinda looking into making it as a ‘Ultimate Team’ kinda function. If the player doesn’t want that player, they will be able to delete them. There will also be a selection in the app where user’s can view all their players.
+User’s will be able to create an account and open ‘packs’ that will give them random players from a league they chosen (BPL. La Liga, Series A, etc.)
+They will then have the ability to edit the player’s stats. I was kinda looking into making it as a ‘Ultimate Team’ kinda function. If the player doesn’t want that player, they will be able to delete them. There will also be a selection in the app where user’s can view all their players.
+
+Difficulties:
+
+-- connecting the backend to the Front End
+-- time management
+-- Adding the edit or delete buttons onto the app
 
 
 
