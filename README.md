@@ -1,6 +1,3 @@
-# soccer-collection
-
-
 # # Project Schedule
 
 
