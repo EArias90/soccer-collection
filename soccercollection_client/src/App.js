@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Players from './components/Player.js';
+import Players from './components/Players.js';
 
 class App extends Component {
   render() {

@@ -89,3 +89,625 @@ Processing by PlayersController#index as HTML
 Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.4ms | Allocations: 838)
 
 
+Started GET "/" for ::1 at 2020-07-11 09:29:49 -0400
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Library/Ruby/Gems/2.6.0/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Library/Ruby/Gems/2.6.0/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 9.4ms | Allocations: 315)
+Completed 200 OK in 21ms (Views: 15.6ms | ActiveRecord: 0.0ms | Allocations: 1596)
+
+
+Started GET "/players" for ::1 at 2020-07-11 09:29:53 -0400
+Processing by PlayersController#index as HTML
+  [1m[36mPlayer Load (9.1ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/controllers/players_controller.rb:8:in `index'
+Completed 200 OK in 28ms (Views: 5.1ms | ActiveRecord: 21.1ms | Allocations: 1891)
+
+
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPlayer Create (0.9ms)[0m  [1m[32mINSERT INTO "players" ("name", "age", "position", "nationality", "currentclub", "retired", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Messi"], ["age", 34], ["position", "Forward/Striker"], ["nationality", "Argentina"], ["currentclub", "FC Barcelona"], ["retired", false], ["created_at", "2020-07-11 14:09:55.373413"], ["updated_at", "2020-07-11 14:09:55.373413"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mPlayer Load (0.7ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Started GET "/" for ::1 at 2020-07-11 10:19:30 -0400
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Library/Ruby/Gems/2.6.0/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Library/Ruby/Gems/2.6.0/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 28.8ms | Allocations: 315)
+Completed 200 OK in 40ms (Views: 38.1ms | ActiveRecord: 0.0ms | Allocations: 1596)
+
+
+Started GET "/payers" for ::1 at 2020-07-11 10:19:34 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/payers"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/players" for ::1 at 2020-07-11 10:19:39 -0400
+Processing by PlayersController#index as HTML
+  [1m[36mPlayer Load (7.5ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/controllers/players_controller.rb:8:in `index'
+Completed 200 OK in 160ms (Views: 16.0ms | ActiveRecord: 141.4ms | Allocations: 7912)
+
+
+Started GET "/players" for ::1 at 2020-07-11 10:36:25 -0400
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlayersController#index as HTML
+  [1m[36mPlayer Load (1.4ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/controllers/players_controller.rb:8:in `index'
+Completed 200 OK in 78ms (Views: 21.4ms | ActiveRecord: 52.1ms | Allocations: 7832)
+
+
+Started POST "/players" for ::1 at 2020-07-11 10:43:08 -0400
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlayersController#create as */*
+  Parameters: {"player"=>{"name"=>"Drogba"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/players_controller.rb:20:in `create'
+  [1m[36mPlayer Create (1.0ms)[0m  [1m[32mINSERT INTO "players" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Drogba"], ["created_at", "2020-07-11 14:43:08.544142"], ["updated_at", "2020-07-11 14:43:08.544142"]]
+  ↳ app/controllers/players_controller.rb:20:in `create'
+  [1m[35m (7.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/players_controller.rb:20:in `create'
+Completed 201 Created in 86ms (Views: 1.8ms | ActiveRecord: 65.0ms | Allocations: 9574)
+
+
+Started GET "/players" for ::1 at 2020-07-11 10:43:13 -0400
+Processing by PlayersController#index as HTML
+  [1m[36mPlayer Load (1.7ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/controllers/players_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 1.7ms | Allocations: 1218)
+
+
+Started POST "/players" for ::1 at 2020-07-11 10:43:35 -0400
+Processing by PlayersController#create as */*
+  Parameters: {"player"=>{"name"=>"Drogba", "age"=>"39"}}
+  [1m[35m (13.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/players_controller.rb:20:in `create'
+  [1m[36mPlayer Create (14.1ms)[0m  [1m[32mINSERT INTO "players" ("name", "age", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Drogba"], ["age", 39], ["created_at", "2020-07-11 14:43:35.905867"], ["updated_at", "2020-07-11 14:43:35.905867"]]
+  ↳ app/controllers/players_controller.rb:20:in `create'
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/players_controller.rb:20:in `create'
+Completed 201 Created in 68ms (Views: 0.6ms | ActiveRecord: 33.0ms | Allocations: 2568)
+
+
+Started GET "/players" for ::1 at 2020-07-11 10:43:38 -0400
+Processing by PlayersController#index as HTML
+  [1m[36mPlayer Load (0.8ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/controllers/players_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.8ms | Allocations: 1281)
+
+
+Started PUT "/players" for ::1 at 2020-07-11 10:43:57 -0400
+  
+ActionController::RoutingError (No route matches [PUT] "/players"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/players" for ::1 at 2020-07-11 10:44:01 -0400
+Processing by PlayersController#index as HTML
+  [1m[36mPlayer Load (3.9ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/controllers/players_controller.rb:8:in `index'
+Completed 200 OK in 12ms (Views: 7.5ms | ActiveRecord: 3.9ms | Allocations: 1299)
+
+
+Started DELETE "/players/3" for ::1 at 2020-07-11 10:44:18 -0400
+Processing by PlayersController#destroy as */*
+  Parameters: {"player"=>{"name"=>"Drogba", "age"=>"40"}, "id"=>"3"}
+  [1m[36mPlayer Load (43.4ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:44:in `set_player'
+  [1m[35m (89.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/players_controller.rb:38:in `destroy'
+  [1m[36mPlayer Destroy (46.6ms)[0m  [1m[31mDELETE FROM "players" WHERE "players"."id" = $1[0m  [["id", 3]]
+  ↳ app/controllers/players_controller.rb:38:in `destroy'
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/players_controller.rb:38:in `destroy'
+Completed 204 No Content in 214ms (ActiveRecord: 187.6ms | Allocations: 4081)
+
+
+Started GET "/players" for ::1 at 2020-07-11 10:44:20 -0400
+Processing by PlayersController#index as HTML
+  [1m[36mPlayer Load (43.7ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/controllers/players_controller.rb:8:in `index'
+Completed 200 OK in 47ms (Views: 3.0ms | ActiveRecord: 43.7ms | Allocations: 1139)
+
+
+Started GET "/" for ::1 at 2020-07-11 11:31:54 -0400
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Library/Ruby/Gems/2.6.0/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Library/Ruby/Gems/2.6.0/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 26.0ms | Allocations: 315)
+Completed 200 OK in 46ms (Views: 41.7ms | ActiveRecord: 0.0ms | Allocations: 1596)
+
+
+Started GET "/players" for ::1 at 2020-07-11 11:31:59 -0400
+Processing by PlayersController#index as HTML
+  [1m[36mPlayer Load (10.4ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/controllers/players_controller.rb:8:in `index'
+Completed 200 OK in 129ms (Views: 16.4ms | ActiveRecord: 83.0ms | Allocations: 8974)
+
+
+Started GET "/players" for ::1 at 2020-07-11 11:52:32 -0400
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlayersController#index as HTML
+  [1m[36mPlayer Load (3.4ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/controllers/players_controller.rb:8:in `index'
+Completed 200 OK in 122ms (Views: 44.2ms | ActiveRecord: 46.8ms | Allocations: 8499)
+
+
+Started GET "/players" for ::1 at 2020-07-11 11:53:12 -0400
+Processing by PlayersController#index as HTML
+  [1m[36mPlayer Load (30.3ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/controllers/players_controller.rb:8:in `index'
+Completed 200 OK in 33ms (Views: 2.9ms | ActiveRecord: 30.3ms | Allocations: 1158)
+
+
+Started GET "/players" for ::1 at 2020-07-11 11:53:19 -0400
+Processing by PlayersController#index as */*
+  [1m[36mPlayer Load (21.8ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/controllers/players_controller.rb:8:in `index'
+Completed 200 OK in 24ms (Views: 2.2ms | ActiveRecord: 21.8ms | Allocations: 1142)
+
+
+Started GET "/players" for ::1 at 2020-07-11 12:02:41 -0400
+Processing by PlayersController#index as */*
+  [1m[36mPlayer Load (64.5ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/controllers/players_controller.rb:8:in `index'
+Completed 200 OK in 69ms (Views: 3.8ms | ActiveRecord: 64.5ms | Allocations: 1242)
+
+
+Started GET "/players" for ::1 at 2020-07-11 12:03:08 -0400
+Processing by PlayersController#index as */*
+  [1m[36mPlayer Load (50.6ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/controllers/players_controller.rb:8:in `index'
+Completed 200 OK in 54ms (Views: 3.2ms | ActiveRecord: 50.6ms | Allocations: 1159)
+
+
+Started GET "/players" for ::1 at 2020-07-11 12:04:34 -0400
+Processing by PlayersController#index as */*
+  [1m[36mPlayer Load (138.2ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/controllers/players_controller.rb:8:in `index'
+Completed 200 OK in 141ms (Views: 2.1ms | ActiveRecord: 138.2ms | Allocations: 1160)
+
+
+Started GET "/players" for ::1 at 2020-07-11 12:04:34 -0400
+Processing by PlayersController#index as */*
+  [1m[36mPlayer Load (0.9ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/controllers/players_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.9ms | Allocations: 1141)
+
+
+Started GET "/players" for ::1 at 2020-07-11 12:10:23 -0400
+Processing by PlayersController#index as */*
+  [1m[36mPlayer Load (103.1ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/controllers/players_controller.rb:8:in `index'
+Completed 200 OK in 107ms (Views: 3.3ms | ActiveRecord: 103.1ms | Allocations: 1142)
+
+
+Started DELETE "/players/3" for ::1 at 2020-07-11 12:23:13 -0400
+Processing by PlayersController#destroy as */*
+  Parameters: {"player"=>{"name"=>"Paul Pogba", "age"=>"40", "position"=>"Midfielder", "nationality"=>"France", "currentclub"=>"Manchester United", "retired"=>"false"}, "id"=>"3"}
+  [1m[36mPlayer Load (0.9ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:44:in `set_player'
+Completed 404 Not Found in 24ms (ActiveRecord: 16.7ms | Allocations: 1196)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Player with 'id'=3):
+  
+app/controllers/players_controller.rb:44:in `set_player'
+Started POST "/players" for ::1 at 2020-07-11 12:23:35 -0400
+Processing by PlayersController#create as */*
+  Parameters: {"player"=>{"name"=>"Paul Pogba", "age"=>"40", "position"=>"Midfielder", "nationality"=>"France", "currentclub"=>"Manchester United", "retired"=>"false"}}
+Completed 422 Unprocessable Entity in 53ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 5663)
+
+
+Started GET "/players" for ::1 at 2020-07-11 12:23:48 -0400
+Processing by PlayersController#index as */*
+  [1m[36mPlayer Load (1.4ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/controllers/players_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 1.4ms | Allocations: 1143)
+
+
+Started PUT "/players" for ::1 at 2020-07-11 12:24:05 -0400
+  
+ActionController::RoutingError (No route matches [PUT] "/players"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/players" for ::1 at 2020-07-11 12:24:17 -0400
+Processing by PlayersController#index as HTML
+  [1m[36mPlayer Load (2.5ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/controllers/players_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 2.2ms | ActiveRecord: 2.5ms | Allocations: 1138)
+
+
+Started PUT "/players" for ::1 at 2020-07-11 12:24:37 -0400
+  
+ActionController::RoutingError (No route matches [PUT] "/players"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started PUT "/player" for ::1 at 2020-07-11 12:24:48 -0400
+  
+ActionController::RoutingError (No route matches [PUT] "/player"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/player" for ::1 at 2020-07-11 12:24:52 -0400
+  
+ActionController::RoutingError (No route matches [POST] "/player"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/players" for ::1 at 2020-07-11 12:25:44 -0400
+Processing by PlayersController#create as */*
+  Parameters: {"player"=>{"name"=>"Paul Pogba", "age"=>"40", "position"=>"Midfielder", "nationality"=>"France", "currentclub"=>"Manchester United"}}
+Completed 422 Unprocessable Entity in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 701)
+
+
+Started GET "/players" for ::1 at 2020-07-11 12:26:22 -0400
+Processing by PlayersController#index as HTML
+  [1m[36mPlayer Load (9.0ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/controllers/players_controller.rb:8:in `index'
+Completed 200 OK in 12ms (Views: 2.6ms | ActiveRecord: 9.0ms | Allocations: 1140)
+
+
+Started GET "/players" for ::1 at 2020-07-11 12:26:23 -0400
+Processing by PlayersController#index as HTML
+  [1m[36mPlayer Load (3.8ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/controllers/players_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 3.0ms | ActiveRecord: 3.8ms | Allocations: 1139)
+
+
+Started DELETE "/players/2" for ::1 at 2020-07-11 12:26:52 -0400
+Processing by PlayersController#destroy as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mPlayer Load (26.0ms)[0m  [1m[34mSELECT "players".* FROM "players" WHERE "players"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/players_controller.rb:44:in `set_player'
+  [1m[35m (16.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/players_controller.rb:38:in `destroy'
+  [1m[36mPlayer Destroy (33.9ms)[0m  [1m[31mDELETE FROM "players" WHERE "players"."id" = $1[0m  [["id", 2]]
+  ↳ app/controllers/players_controller.rb:38:in `destroy'
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/players_controller.rb:38:in `destroy'
+Completed 204 No Content in 85ms (ActiveRecord: 78.8ms | Allocations: 2483)
+
+
+Started GET "/players" for ::1 at 2020-07-11 12:26:56 -0400
+Processing by PlayersController#index as HTML
+  [1m[36mPlayer Load (0.5ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/controllers/players_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.5ms | Allocations: 997)
+
+
+Started POST "/players" for ::1 at 2020-07-11 12:27:31 -0400
+Processing by PlayersController#create as */*
+  Parameters: {"name"=>"Paul Pogba"}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 121)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: player):
+  
+app/controllers/players_controller.rb:49:in `player_params'
+app/controllers/players_controller.rb:18:in `create'
+Started POST "/players" for ::1 at 2020-07-11 12:27:41 -0400
+Processing by PlayersController#create as */*
+  Parameters: {"player"=>{"name"=>"Paul Pogba"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 649)
+
+
+Started GET "/players" for ::1 at 2020-07-11 12:27:45 -0400
+Processing by PlayersController#index as HTML
+  [1m[36mPlayer Load (2.5ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/controllers/players_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 1.7ms | ActiveRecord: 2.5ms | Allocations: 998)
+
+
+Started POST "/players" for ::1 at 2020-07-11 12:27:59 -0400
+Processing by PlayersController#create as */*
+  Parameters: {"players"=>{"name"=>"Paul Pogba"}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 122)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: player):
+  
+app/controllers/players_controller.rb:49:in `player_params'
+app/controllers/players_controller.rb:18:in `create'
+Started GET "/players" for ::1 at 2020-07-11 12:28:17 -0400
+Processing by PlayersController#index as */*
+  [1m[36mPlayer Load (1.1ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/controllers/players_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 1.1ms | Allocations: 998)
+
+
+Started POST "/players" for ::1 at 2020-07-11 12:29:28 -0400
+Processing by PlayersController#create as */*
+  Parameters: {"player"=>{"name"=>"Paul Pogba"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 649)
+
+
+Started POST "/players" for ::1 at 2020-07-11 12:30:46 -0400
+Processing by PlayersController#create as */*
+  Parameters: {"players"=>{"name"=>"Paul Pogba"}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 122)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: player):
+  
+app/controllers/players_controller.rb:49:in `player_params'
+app/controllers/players_controller.rb:18:in `create'
+Started POST "/players" for ::1 at 2020-07-11 12:31:18 -0400
+Processing by PlayersController#create as */*
+  Parameters: {"player"=>{"name"=>"Paul Pogba"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 647)
+
+
+Started POST "/players" for ::1 at 2020-07-11 12:32:58 -0400
+Processing by PlayersController#create as */*
+  Parameters: {"player"=>{"name"=>"Paul Pogba"}}
+Completed 422 Unprocessable Entity in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 647)
+
+
+Started POST "/players" for ::1 at 2020-07-11 12:33:50 -0400
+Processing by PlayersController#create as */*
+  Parameters: {"players"=>{"name"=>"Paul Pogba"}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 122)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: player):
+  
+app/controllers/players_controller.rb:49:in `player_params'
+app/controllers/players_controller.rb:18:in `create'
+Started POST "/players" for ::1 at 2020-07-11 12:33:58 -0400
+Processing by PlayersController#create as */*
+  Parameters: {"player"=>{"name"=>"Paul Pogba"}}
+Completed 422 Unprocessable Entity in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 647)
+
+
+Started POST "/players" for ::1 at 2020-07-11 12:35:00 -0400
+Processing by PlayersController#create as */*
+  Parameters: {"Player"=>{"name"=>"Paul Pogba"}}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 122)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: player):
+  
+app/controllers/players_controller.rb:49:in `player_params'
+app/controllers/players_controller.rb:18:in `create'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/players" for ::1 at 2020-07-11 12:37:04 -0400
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlayersController#index as HTML
+  [1m[36mPlayer Load (0.9ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/controllers/players_controller.rb:8:in `index'
+Completed 200 OK in 70ms (Views: 20.0ms | ActiveRecord: 44.7ms | Allocations: 8359)
+
+
+Started GET "/players" for ::1 at 2020-07-11 12:38:39 -0400
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlayersController#index as */*
+  [1m[36mPlayer Load (3.6ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/controllers/players_controller.rb:8:in `index'
+Completed 200 OK in 102ms (Views: 17.0ms | ActiveRecord: 80.6ms | Allocations: 8360)
+
+
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/players" for ::1 at 2020-07-11 12:39:23 -0400
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlayersController#index as */*
+  [1m[36mPlayer Load (21.8ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/controllers/players_controller.rb:8:in `index'
+Completed 200 OK in 127ms (Views: 41.4ms | ActiveRecord: 78.6ms | Allocations: 8360)
+
+
+Started GET "/players" for ::1 at 2020-07-11 12:39:32 -0400
+Processing by PlayersController#index as HTML
+  [1m[36mPlayer Load (2.9ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/controllers/players_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 2.5ms | ActiveRecord: 2.9ms | Allocations: 1017)
+
+
+Started GET "/" for ::1 at 2020-07-11 12:56:05 -0400
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Library/Ruby/Gems/2.6.0/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Library/Ruby/Gems/2.6.0/gems/railties-6.0.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 37.5ms | Allocations: 315)
+Completed 200 OK in 96ms (Views: 65.6ms | ActiveRecord: 0.0ms | Allocations: 1597)
+
+
+Started GET "/players" for ::1 at 2020-07-11 12:56:09 -0400
+Processing by PlayersController#index as HTML
+  [1m[36mPlayer Load (21.5ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/controllers/players_controller.rb:8:in `index'
+Completed 200 OK in 131ms (Views: 15.5ms | ActiveRecord: 106.6ms | Allocations: 8371)
+
+
+Started GET "/players" for ::1 at 2020-07-11 12:56:11 -0400
+Processing by PlayersController#index as HTML
+  [1m[36mPlayer Load (1.2ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/controllers/players_controller.rb:8:in `index'
+Completed 200 OK in 5ms (Views: 3.2ms | ActiveRecord: 1.2ms | Allocations: 1016)
+
+
+Started GET "/players" for ::1 at 2020-07-11 12:56:12 -0400
+Processing by PlayersController#index as HTML
+  [1m[36mPlayer Load (0.4ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/controllers/players_controller.rb:8:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.4ms | Allocations: 1016)
+
+
+Started GET "/players" for ::1 at 2020-07-11 12:56:31 -0400
+Processing by PlayersController#index as HTML
+  [1m[36mPlayer Load (2.8ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/controllers/players_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 2.5ms | ActiveRecord: 2.8ms | Allocations: 997)
+
+
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/players" for ::1 at 2020-07-11 13:39:44 -0400
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlayersController#index as */*
+  [1m[36mPlayer Load (1.3ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/controllers/players_controller.rb:8:in `index'
+Completed 200 OK in 43ms (Views: 9.9ms | ActiveRecord: 26.0ms | Allocations: 8366)
+
+
+Started GET "/players" for ::1 at 2020-07-11 13:39:55 -0400
+Processing by PlayersController#index as HTML
+  [1m[36mPlayer Load (4.3ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/controllers/players_controller.rb:8:in `index'
+Completed 200 OK in 6ms (Views: 1.7ms | ActiveRecord: 4.3ms | Allocations: 1017)
+
+
+Started GET "/players" for ::1 at 2020-07-11 13:40:13 -0400
+Processing by PlayersController#index as */*
+  [1m[36mPlayer Load (28.5ms)[0m  [1m[34mSELECT "players".* FROM "players"[0m
+  ↳ app/controllers/players_controller.rb:8:in `index'
+Completed 200 OK in 31ms (Views: 2.1ms | ActiveRecord: 28.5ms | Allocations: 999)
+
+

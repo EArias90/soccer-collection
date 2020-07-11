@@ -5,3 +5,17 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+Player.create ([{
+name: 'Leonel Messi',
+age: 34,
+position: 'Forward',
+nationality: 'Argentina',
+currentclub: 'FC Barcelona',
+retired: false
+
+
+
+}])
+
